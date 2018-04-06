@@ -1,0 +1,22 @@
+{
+  "name": "sensu-pbs-qstat-metrics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sensu-pbs-qstat-metrics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soichih/sensu-pbs-qstat-metrics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soichih/sensu-pbs-qstat-metrics/issues"
+  },
+  "homepage": "https://github.com/soichih/sensu-pbs-qstat-metrics#readme",
+  "dependencies": {
+    "xml2js": "^0.4.19"
+  }
+}
