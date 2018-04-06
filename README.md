@@ -5,11 +5,11 @@ This script turns qstat XML into a graphite metrics output.
 
 First create a cron job that loads desired qstat output.
 
-> 0 0 0 0 0 ssh hayashis@carbonate.uits.iu.edu qstat -u hayashis -f -x > /tmp/qstat.xml
+> * * * * * ssh whoever@somewhere.edu qstat -u whoever -f -x > /tmp/qstat.xml
 
 Then, run the script
 
-> ./sensu-pbs-qstat-metrics.js /tmp/qstat.xml test.carbonate.stat
+> ./sensu-pbs-qstat-metrics.js /tmp/qstat.xml test.somewhere.stat
 
 For sensu, you can do something like..
 
