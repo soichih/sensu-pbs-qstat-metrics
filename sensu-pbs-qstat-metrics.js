@@ -15,6 +15,7 @@ const thexml = fs.readFileSync(xmlname, "ascii");
 parseString(thexml, (err,stats)=>{
     if(err) throw err;
     const jobs = stats.Data.Job;
+    if(!jobs) return; //no jobs?
 
     let states = [];
     jobs.forEach(job=>{
