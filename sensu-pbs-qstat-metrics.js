@@ -3,15 +3,15 @@
 const parseString = require('xml2js').parseString;
 const fs = require('fs');
 
-const xmlname = process.argv[2];
-const graphite_prefix = process.argv[3];
+//const xmlname = process.argv[2];
+const graphite_prefix = process.argv[2];
 
-if(!xmlname || !graphite_prefix) { 
-    console.error("usage: sensu-pbs-qstat-metrics.js <qstatxml> <graphite_prefix>");
+if(!graphite_prefix) {
+    console.error("usage: sensu-pbs-qstat-metrics.js <graphite_prefix>");
     process.exit(1);
 }
 
-const thexml = fs.readFileSync(xmlname, "ascii");
+const thexml = fs.readFileSync('/dev/stdin', "ascii");
 parseString(thexml, (err,stats)=>{
     if(err) throw err;
     const jobs = stats.Data.Job;
